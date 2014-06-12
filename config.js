@@ -1,0 +1,21 @@
+module.exports = {
+    GOOGLE_OAUTH1_CLIENT_KEY:         "1050185146238.apps.googleusercontent.com",
+    GOOGLE_OAUTH1_CLIENT_SECRET:      "8TZ2siOogcaYl3UnQJHLMRgI",
+    GOOGLE_OAUTH2_CLIENT_KEY:         "374574440745.apps.googleusercontent.com",
+    GOOGLE_OAUTH2_CLIENT_SECRET:      "eErfMyNNa_8oKDu_XLrMCJd3",
+    GOOGLE_ANALYTICS_TRACKER:         "UA-26284170-1",
+    CHAMBER_ROOT_URL:                 "http://localhost:8400",
+    GOOGLE_ROOT_REFRESH_URL:          "https://accounts.google.com/o/oauth2/token" ,
+  
+    mongodbConnectionUrl:             "mongodb://localhost/google",
+  
+    //WHITTAKER_ROOT_URL:             "http://whittaker-campus.dmz.arch.ecollege.com:3001",
+    WHITTAKER_ROOT_URL:               "http://10.52.94.241:3001",
+    WSOD_M_ROOT_URL:                  "http://m-api.ecollege-labs.com",
+    WSOD_PH_ROOT_URL:                 "http://ph-api.ecollege-labs.com",
+    AFFINITY_PERSONA_ROOT_URL:        "http://personadev.petdev.com",
+  
+    REPL_PORT:                        8086,
+    LOGGING_DIRECTORY:                "logs",
+    WORKERS:                          1
+};

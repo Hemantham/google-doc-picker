@@ -1,0 +1,19 @@
+<div class="dijitDialog" tabindex="-1" waiRole="dialog" waiState="labelledby-{{id}}_title">
+	<div dojoAttachPoint="titleBar" class="dijitDialogTitleBar">
+	{{#isAdmin}}
+	<span style="color:#f00;font-weight:bold;">[admin]</span>
+	{{/isAdmin}}
+	<span dojoAttachPoint="titleNode" class="dijitDialogTitle" id="{{id}}_title">{{title}}</span>
+	<span dojoAttachPoint="closeButtonNode" class="dijitDialogCloseIcon" dojoAttachEvent="onclick: onCancel" title="{{buttonCancel}}">
+		<span dojoAttachPoint="closeText" class="closeText" title="{{buttonCancel}}">x</span>
+	</span>
+	</div>
+		<div dojoAttachPoint="containerNode" class="dijitDialogPaneContent">{{content}}</div>
+		<div class="dijitDialogPaneContent" style="color:#888;text-align:right;border-top:0;font-style:italic;">Post on {{calculatedTime}}</div>
+		<div class="dijitDialogPaneContent">
+			<strong>Read by:</strong>
+			<ul>
+				{{#readBy}}<li>{{.}}</li>{{/readBy}}
+			</ul>
+		</div>
+</div>

@@ -1,0 +1,39 @@
+{
+  "name": "googledocpicker",
+  "description": "A cross-domain widget and service for picking and uploading to Google Docs",
+  "version": "2.0.1",
+  "contributors": [ 
+    { "name": "Mike Brevoort", "email": "mikebre@ecollege.com" },
+    { "name": "Tom Barton", "email": "tomba@ecollege.com" }
+  ],
+  "homepage": "http://10tothe100.info/google-doc-picker/index.html",
+  "private": true,
+  "dependencies": {
+    "request": "2.2.9",
+    "semver": "1.0.9",
+    "express": "2.5.8",
+    "connect-gzip": "0.1.5",
+    "underscore": "1.3.x",
+    "eclg-whittaker": "git+ssh://git@devops-tools.pearson.com/krmt/whittaker-client.git",
+    "eclg-dojo": "git+ssh://git@devops-tools.pearson.com/krmt/dojo-npm.git",
+    "docco-husky": "latest",
+    "eclg-google-service-client": "git+ssh://git@devops-tools.pearson.com/krmt/google-service-client.git",
+    "eclg-node-middleware": "git+ssh://git@devops-tools.pearson.com/krmt/node-middleware.git",
+    "eclg-google-oauth": "git+ssh://git@devops-tools.pearson.com/krmt/google-oauth.git",
+    "nconf": "~0.6.7",
+    "spindrift-harbor": "http://reggie.prsn.us/package/spindrift-harbor/0.3.1",
+    "scribe": "http://reggie.prsn.us/package/scribe/0.0.1"
+  },
+  "devDependencies": {
+    "nodeunit": "latest",
+    "eclg-windmill": "git+ssh://git@devops-tools.pearson.com/krmt/windmill-client.git"
+  },
+  "keywords": ["google", "google docs", "open class", "berlin", "ecollege", "pearson"],
+  "scripts": { "test" : "make test" },
+  "engines": { "node": ">= 0.6.12" },
+  "docco_husky": {
+    "output_dir": "docs/out",
+    "content_dir": "docs/src",
+    "project_name": "Google Doc Picker" 
+  }
+}

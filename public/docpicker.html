@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<head>
+	<meta charset="utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/resources/dojo.css" />
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dijit/themes/nihilo/nihilo.css" />
+
+	<script>
+		var dojoConfig = {
+			isDebug: true,
+			debugAtAllCosts: true,
+			parseOnLoad: false,
+			dojoBlankHtmlUrl: '/js/docpicker/resources',
+			baseUrl: '/',
+			modulePaths: {
+			  docpicker: '/js/docpicker',
+			  mustache: '/js/mustache'
+			}
+		};
+	</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js.uncompressed.js"></script>
+  <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/_firebug/firebug.xd.js"></script>
+	<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/_base/_loader/loader_debug.xd.js"></script>
+  <script src="/js/docpicker/docpicker.js"></script>
+</head>	
+<body class="nihilo" >
+	
+	<script>
+      dojo.require('docpicker.DocsDialog');
+
+    	this.cssLinkElement = dojo.create( 'link', { 
+		    type: "text/css", 
+		    rel:'stylesheet', 
+		    href: dojo.moduleUrl( 'docpicker.resources' ).uri + 'PickerSpace.css',
+		    'data-parent-id': this.id
+		}, dojo.query( 'head' )[ 0 ] );
+
+
+    dojo.addOnLoad(function() {
+        
+        var pickerEmitter = new EventEmitter();
+        pickerEmitter.addListener('selected', pickerEmitterListener);
+
+        function pickerEmitterListener( doc ) {
+            var messageUrl = docpicker.Util.getUrlParameter( window.location, 'messageUrl' ) || null;
+            window.parent.postMessage( dojo.toJson({ event: 'close', data: doc } ), messageUrl || 'http://' + window.location.host );
+        }
+        
+        docpicker.showDocsDialog( pickerEmitter );
+
+    });
+
+	</script>
+	</body>
+</html>

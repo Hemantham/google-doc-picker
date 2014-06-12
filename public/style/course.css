@@ -1,0 +1,347 @@
+
+
+/* Colors */
+/* light tan: #efebde */
+/* tan: #e1dabe */
+/* dark tan #46433b */
+/* orange: #f26522 */
+/* light blue: #bfd8ec */
+/* blue: #0382e5 */
+/* light gray: #efefef */
+/* gray: #a2a8b3 */
+/* dark gray: #525252 */
+
+/* Set it all to zero*/
+/* @import url("reset.css"); */
+
+/* element overrides */
+body {
+	font: 100%/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #efebde;
+	min-width: 800px;
+}
+		
+h1,h2,h3,h4 {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 140%;
+}
+
+h2 {
+	font-size: 130%;
+}
+
+h3 {
+	font-size: 105%;
+}
+
+h4,p {
+	font-size: 90%;
+}
+/*removing for now because it messes with the rest of the page 
+h1,h2,h3,p {
+	margin-bottom: 1.4em;
+}
+*/
+
+strong, b {
+	font-weight: bold;
+}
+
+em, i {
+	font-style: italic;
+}
+
+a, a:link {
+	text-decoration: none;
+	color: #0382e5;
+}
+
+/* Special Classes */
+.hiddenlabel {
+	margin-left: 10000px;
+	white-space: nowrap;
+}
+
+.clearoutfloats {
+	clear: both;
+	height: 1px;
+	width: 100%;
+}
+
+/* Header */
+#header {
+	background: url(../images/background_header.png) repeat;
+	margin: -5px 20px 0 20px;
+	padding: 0;
+	border: 1px solid #999;
+	height: 45px;
+	overflow: hidden;
+}
+
+#header h1 {
+	float: left;
+	color: #efebde;
+	margin: 12px 0 0 12px;
+}
+
+#courseSettingsMenu {
+	float: right;
+	height: 45px;
+	width: 33px;
+	overflow: hidden;
+	background: url(../images/background_header-settings.png) no-repeat 0 -7px;
+	border-left: #e1dabe;
+
+}
+
+#courseSettingsMenu a {
+	display: block;
+	width: 33px;
+	height: 40px;
+}
+
+ul.coursetools {
+	float: right;
+}
+
+ul.coursetools li {
+	float: left;
+	font-size: 90%;
+	font-weight: bold;
+	margin: 15px 15px 0 0;
+}
+
+ul.coursetools a,
+ul.coursetools a:visited {
+	display: block;
+	padding: 0 10px 2px 10px;
+	color: #efebde;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+ul.coursetools a:hover,
+ul.coursetools a.selected {
+	background-color: #46433b;
+}
+
+/* Two Column Container */
+#twocolumncontainer {
+	margin: 40px 20px 0 20px;
+	padding-left: 200px; /*LeftCol width */
+}
+
+#navcontainer, #courseHeaderBar {
+  position: relative;
+  float: left;	 
+}
+
+/* Main Navigation */
+#navcontainer {
+	width: 200px;
+	overflow: hidden;
+}
+
+#navcontainer .moduletitlebar,
+#navcontainer .modifymenu {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#navcontainer .moduletitlebar {
+	width: auto;
+	height: 25px;
+	background-color: #f26522;
+	padding-top: 1px;
+}
+
+#navcontainer .modifymenu {
+	background: url(../images/background_author-options.png) repeat-x;
+	margin-right: 1px;
+	margin-left: 1px;
+	text-align: right;
+}
+
+#navcontainer .modifymenu a {
+	color: #efebde;
+	background: url(../images/gear_light_author-options.png) no-repeat right center;
+	padding-right: 20px;
+	margin-right: 5px;
+	font-size: 80%;
+	font-weight: bold;
+}
+
+#navcontainer ul#mainMenu {
+	border: 1px solid #a2a8b3;
+	background-color: #fff;
+	font-size: 80%;
+	overflow: hidden;
+}
+
+ul#mainMenu a {
+	color: #525252;
+	line-height: 1.2em;
+}
+
+ul#mainMenu li.level0 {
+	font-weight: bold;
+}
+
+ul#mainMenu li.level0 a {
+	display: block;
+	width: 100%;
+	border-top: 1px solid #a2a8b3;
+	padding: 8px 3px 8px 10px;
+	background-color: #efefef;
+}
+
+ul#mainMenu li.level0 a:hover,
+ul#mainMenu li.level0 a.on {
+	background-color: #bfd8ec;
+}
+
+ul#mainMenu li.level0 ul {
+	margin: 5px 0;
+}
+
+ul#mainMenu li.level1 {
+	font-weight: normal;
+}
+
+ul#mainMenu li.level1 a {
+	display: block;
+	border-top: none;
+	padding: 2px 0 3px 10px;
+	background-color: #fff;
+	font-size: 98%;
+}
+
+ul#mainMenu li.level1 a:hover,
+ul#mainMenu li.level1 a.on {
+	background-color: #fff;
+	color: #0382e5;
+}
+
+ul#mainMenu li.level1 a.on {
+	font-weight: bold;
+}
+
+ul#mainMenu li.level1 li {
+	padding-left: 10px;
+	padding-right: 15px;
+}
+
+ul#mainMenu li.first a {
+	border-top: none;
+}
+
+ul#mainMenu li.last a {
+	border-bottom: none;
+}
+
+ul#mainMenu span.expander {
+	float: left;
+	margin-top: 4px;
+	padding-left: 3px;
+	width: 8px;
+	height: 8px;
+}
+
+ul#mainMenu span.label {
+	display: block;
+	margin-left: 10px;
+}
+
+li.open > a span:first-child {
+	background: url(../images/expanded.png) no-repeat left center;
+}
+
+li.closed > a span:first-child {
+	background: url(../images/collapsed.png) no-repeat left center;
+}
+
+/* Header Bar in Content Area */
+.courseHeaderBar {
+	width: 100%;
+}
+
+/* Needed to change margin from 20 to 0 to deal with the page structure difference for the prototype only */
+.courseHeaderBar .moduletitlebar {
+	margin-left: 0px;
+	height: 25px;
+	border-bottom: 1px solid #525252;
+}
+
+.courseHeaderBar h2 {
+	float: left;
+	color: #525252;
+	background: url(../images/control-fullscreen.png) no-repeat;
+	padding-left: 25px;
+}
+
+.courseHeaderBar .modifymenu {
+	float: right;
+}
+
+.courseHeaderBar .modifymenu {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.courseHeaderBar .modifymenu {
+	background: url(../images/background_author-options.png) repeat-x;
+	margin-right: 1px;
+	margin-left: 1px;
+	text-align: right;
+	height: 25px;
+}
+
+.courseHeaderBar .modifymenu a {
+	color: #efebde;
+	background: url(../images/gear_light_author-options.png) no-repeat right center;
+	padding-right: 20px;
+	padding-left: 8px;
+	margin-right: 5px;
+	font-size: 70%;
+	font-weight: bold;
+}
+
+/*Pulled out of course home specific styles - containers and such so shouldn't need this in real site - start */
+
+.contentContainerCourse {
+	margin: 25px 30px 0 25px;
+	clear: both;
+	padding:0px;
+}
+
+.leftColumnCourse {
+	float: left;
+	width: 2px;
+	/* defining the width of left and right globally */
+}
+
+.rightColumnCourse {
+	margin-left: 220px;
+	overflow:hidden;
+}
+
+.courseContainer {
+	background-color:#fff;
+	padding: 20px;
+}
+
+
+
+/*Pulled out of course home specific styles - containers and such - end */

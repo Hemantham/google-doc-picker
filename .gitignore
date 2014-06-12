@@ -1,0 +1,10 @@
+logs
+dist
+widgets/dist
+widgets/js/dojo/release
+.DS_Store
+.settings
+node_modules
+package
+npm-debug.log
+docs/out

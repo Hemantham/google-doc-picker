@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	@import "../../dijit/themes/claro/claro.css";
+	</style>
+</head>
+<body class="claro">
+
+<button id="show" dojoType="dijit.form.Button">Show Dialog</button>
+
+
+<script>
+	djConfig = {
+		parseOnLoad: true,
+		modulePaths: {
+			mustache: location.pathname.substring(0, location.pathname.lastIndexOf("/tests"))
+		},
+		require: ["dojo.cache", "dijit.dijit", "mustache._Templated", "dijit.Dialog", "dijit.form.Button"]
+	}
+</script>
+<script src="../../dojo/dojo.js" type="text/javascript"></script>
+<script>
+	// When the DOM is ready
+	dojo.ready(function(){
+
+		// Create a new dialog
+		dojo.declare("my.Dialog",[dijit.Dialog, mustache._Templated],{
+			title: "",
+			content: "",
+			templateString: dojo.cache("mustache.tests","templates/dialog.html")
+		});
+		
+		// Use it
+		var myDialog = new my.Dialog({
+			title: "David Walsh",
+			content:  "This is content placed and formatted by mustache js",
+			isAdmin: function() {
+				return true; //just make them an admin
+			},
+			calculatedTime: function() {
+				var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+				return days[new Date().getDay()];
+			},
+			readBy: ["Rod Stewart","Sam Foster","The Boss"]
+		},dojo.create("div",{},dojo.body()));
+		
+		// Button to show
+		dojo.connect(dijit.byId("show"),"onClick",function() {
+			myDialog.show();
+		});
+		
+	});
+
+</script>
+</body>
+</html>

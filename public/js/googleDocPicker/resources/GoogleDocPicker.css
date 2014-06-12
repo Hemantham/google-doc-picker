@@ -1,0 +1,21 @@
+/* Google Doc Picker */
+#pickerIFrameContainer {
+  position: absolute;
+  left: 50%;
+  margin: 0 auto 0 -320px;
+  padding: 5px 10px;
+  top: -2000px;
+  position: absolute;
+  width: 625px;
+  z-index: 3000;
+}
+
+#pickerSpinner {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	z-index: 3000;
+	background: white;
+	box-shadow: 1px 1px 5px #888;
+	border: 1px solid #EEE;
+}

@@ -1,0 +1,10 @@
+description     "${SERVICE_DESCRIPTION}"
+author          "Mike Brevoort"
+start on startup
+
+env CONFIG=${CONFIG}
+env NODE_ENV=production
+	
+respawn
+
+exec n as ${NODE_VERSION} ${project_dir}/app/app.js ${PORT} 2>&1 > /var/log/${SERVICE_NAME}_service.log

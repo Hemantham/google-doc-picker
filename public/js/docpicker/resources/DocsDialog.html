@@ -1,0 +1,83 @@
+<div>
+	<div dojoAttachPoint="pickerContainer" class="pickerInvisible">
+	  <div class="pickerClosePopup"><a dojoAttachPoint="closeDialogX" href="#">Close</a></div>
+	  <div class="pickerTop">
+	      <h1 class="pickerTopText">Select Files</h1>
+	  </div>
+	  <div style="width: 600px;">
+		  <div class="pickerLeft">
+		    <div class="pickerLeftText">
+		      <h2 class="pickerDocsLink" dojoAttachPoint="pickerDocsLink" tabindex="1">
+		        Google Docs
+		      </h2>
+		      <h2 class="pickerUploadLink" dojoAttachPoint="pickerUploadLink" tabindex="2">
+		        + Upload New File
+		      </h2>
+			  </div>
+		  </div>
+		  <div class="pickerRight">
+        <div dojoAttachPoint="pickerUploadHTML5" class="pickerUploadHTML5">
+        	<div class="pickerDropTarget" id="dropTarget">
+		        <div class="pickerDisplayTarget" dojoAttachPoint="displayTarget"></div>
+		        <div id="pickerActionContainer" class="pickerActionContainer">
+			        <div class="pickerActionText">
+			          Drag files here
+			        </div>
+			        <div class="pickerSelectContainer">
+				        <div class="pickerOr">or</div>
+				        <input 
+    							class="pickerBrowseButton" 
+    							name="uploadedfile" 
+    							multiple="true" 
+    							uploadOnSelect="true" 
+    							type="file" 
+    							dojoType="dojox.form.Uploader" 
+    							label="Select a File" 
+    							id="uploader"
+    							dojoAttachPoint="uploader"/>
+  			      </div>
+		        </div>
+		      </div>
+		      <div id="ieUpload" class="pickerIeContainer" >
+			      <div class="pickerIeBorder">
+			        <div class="pickerIeUploadLabel">Upload a File</div>
+	            <div id="pickerIeBar" class="pickerIeBar"></div>
+	            <div id="pickerIeFileInfo" class="pickerIeFileinfo"></div>
+			        <div class="clear"></div>
+			        <div class="pickerIeFormContainer">
+			          <div>
+					        <form method="POST" action="" name="frmIO" id="frmIO" enctype="multipart/form-data">
+			              <input 
+			                class="pickerBrowseButton pickerFloatLeft" 
+			                name="iEuploadedfile" 
+			                multiple="false" 
+			                uploadOnSelect="false"
+			                type="file" 
+			                dojoType="dojox.form.Uploader" 
+			                label="Select a File" 
+			                id="iEuploader"
+			                dojoAttachPoint="iEuploader"/>
+	                  <input class=" pickerIeSubmit" type="submit" name="pickerIeSubmit" label="Submit" dojoAttachPoint="uploadSubmit" dojoType="dijit.form.Button" />
+			            </form>	
+		            </div>
+	            </div>    
+	          </div>    
+		      </div>
+        </div>  
+			  <div dojoAttachPoint="pickerChooseDoc">
+					<div class="pickerSearchDocs">
+					  <div class="pickerSearchTextBox" dojoAttachPoint="pickerSearchTextBox" id="pickerSearchTextBox" dojoType="dijit.form.TextBox" value=""  tabindex="3"></div>
+					  <button class="pickerSearchButton" id="pickerSearchButton" dojoType="dijit.form.Button" type="button" tabindex="4">Search</button>
+					</div> 
+					<div class="pickerSearchResult" id="pickerSearchResult" dojoAttachPoint="pickerSearchResult" tabindex="5">
+					</div> 
+					<div class="pickerSearchAction">
+					  <button class="pickerAddButton" dojoAttachPoint="pickerAddButton" id="pickerAddButton" dojoType="dijit.form.Button" type="button" tabindex="6">Add to Collaboration</button>
+					  <div class="pickerCancelLink" dojoAttachPoint="pickerCancelLink" tabindex="7">Cancel</div>
+					</div> 	
+				</div>         
+		  </div>
+		  <div style="clear: both;"></div>
+	  </div>
+	</div>
+</div> 

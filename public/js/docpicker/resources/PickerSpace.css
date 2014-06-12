@@ -1,0 +1,648 @@
+/* Google Docs Dialog */
+.pickerIframe {
+	height: 525px; 
+	width: 625px;
+	overflow: hidden;	
+	border: none;
+}
+
+.PickerSpace {
+	background: none repeat scroll 0 0 white;
+	box-shadow: 0px 1px 4px #333;
+/* 	left: 50%; */
+/* 	margin: 0 auto 0 -320px; */
+	position: absolute;
+	top: 10px;
+	width: 600px;
+	height: 500px;
+	z-index: 2000;
+	border: 1px solid;
+	margin-left: 10px
+}
+
+.PickerSpace .clear {
+  clear: both;
+}
+.PickerSpace .pickerUploadHTML5 {
+  visibility: hidden;
+  display: none; 
+}
+
+.PickerSpace .pickerDropTarget {
+	background-color: #E6E6E6;
+	border: 1px solid #CCCCCC;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	font-weight: bold;
+	text-align: center;
+	margin: 12px;
+	width: 414px;
+  min-height:240px;
+  max-height:415px;
+}
+
+.PickerSpace .pickerTargetActive {
+    box-shadow: 0 0 10px #0382E5;
+}
+
+.PickerSpace .pickerBrowseButton .dijitButton, .PickerSpace .pickerBrowseButton .dijitButtonNode {
+  width: 126px;
+  line-height: 30px;
+	background: #1258b3; 
+  color: white;
+  border-radius: 5px;  
+  padding: 0px;
+}
+
+.PickerSpace .pickerBrowseButton  {
+  width: 126px;
+  height: 30px
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.PickerSpace .dojoxFileInput {
+  width: 126px!important;
+  height: 34px !important;  
+}
+
+.PickerSpace .pickerTopText {
+  position: absolute;
+  margin-top:20px;
+  margin-left: 25px;
+  font-size: 18px;
+}
+
+.PickerSpace .pickerTop {
+	width: 600px; 
+	height: 59px;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.PickerSpace .pickerRight {
+	float: right; 
+	width: 440px; 
+	height: 440px;
+}
+
+.PickerSpace .pickerLeft {
+	float: left; 
+	width: 159px; 
+	height: 440px; 
+	border-right: 1px solid #E0E0E0;
+}
+
+.PickerSpace .pickerOr {
+  float:left;
+  margin-right: 5px;
+  font-size: 18px;
+  line-height: 31px;
+}
+
+.PickerSpace .pickerActionText {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.PickerSpace .pickerActionContainer {
+  margin-top: 80px;
+}
+
+.PickerSpace .pickerActionScrollContainer {
+  margin-top: 20px;
+}
+
+.PickerSpace .pickerLeftText {
+	margin-top:20px;
+	margin-left: 25px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.PickerSpace h2 { 
+  margin: 0 0 15px 0;
+  font-size: 100%;
+}
+
+.PickerSpace .pickerDocsLink {
+	color: #ce3f0d;
+	margin-bottom: 20px;
+}
+
+.PickerSpace .pickerSelectContainer {
+	width: 150px;
+	margin: 0 auto; 
+	margin-bottom: 25px;
+}
+
+.PickerSpace .pickerIeContainer {
+  width: 440px;
+/*   margin: 0 auto;  */
+/*   margin-top: 100px; */
+}
+
+.PickerSpace .pickerIeBorder {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;	
+	background-color: #E6E6E6;
+	border: 1px solid #CCCCCC;
+  margin: 12px;
+  width: 415px;
+  height: 260px;
+
+}
+
+.PickerSpace .pickerIeBar {
+  height: 30px;
+  width: 370px;
+  margin: 0 auto;
+}
+
+.PickerSpace .pickerIeCancelMsg {
+  cursor: pointer;
+  float: right;
+  color: #6e6e6e;
+  font-size: 10px;
+  z-index: 100;
+}
+
+.PickerSpace .pickerIeUploadLabel {
+	margin: 50px 0 20px 130px;
+  font-size: 24px;
+}
+
+.PickerSpace .pickerIeFileinfo {
+  min-height: 30px;
+  width: 390px;
+  overflow: hidden;
+  margin-left: 25px;
+  margin-bottom: 10px;
+/*  direction: rtl; */
+  white-space: wrap;
+  text-align: left;
+}
+
+.PickerSpace .pickerIeForm {
+  margin-left: 65px; 
+  margin: 0 auto;
+}
+
+.PickerSpace .pickerIeFormContainer {
+  width: 370px;
+  margin-top: 10px;
+  margin: 0 auto;
+}
+.PickerSpace .pickerDisplayTarget {
+  font-size: 10px;
+  max-height: 300px;
+}
+
+.PickerSpace .pickerClosePopup a {
+  background: url('images/closeModal.png') no-repeat 0 0;
+  display: block;
+  float: right;
+  margin: -10px -15px 0 0;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.PickerSpace .pickerInvisibleDisplay {
+  visibility: hidden;
+  display: none;
+}
+
+.PickerSpace .pickerVisibleDisplay {
+  visibility: visible;
+  display: block;
+}
+
+/* fileUploader */
+.PickerSpace .pickerUploader {
+	overflow: hidden;
+	width: 405px;
+}
+
+.PickerSpace .pickerUploader .dijitDialogPaneContent {
+	max-height: inherit;
+	overflow: hidden;
+	font-size:14px;
+}
+
+.PickerSpace .pickerBarLabel {
+	overflow: hidden;
+	float: left;
+	font-size: 12px;
+/* 	margin-left: 5px; */
+	width: 330px;
+}
+
+.PickerSpace .pickerBarLabelRight {
+  float: right;
+  margin-right:5px;
+  font-size: 10px;
+}
+
+.PickerSpace .pickerIcon {
+  float: left;
+  height: 22px;
+  width: 20px;
+  background-image:url('images/googleIcons.png');
+}
+
+.PickerSpace .pickerDoc {background-position:-10px -11px;}
+.PickerSpace .pickerSpreadSheet {background-position:-55px -11px;}
+.PickerSpace .pickerPresentation {background-position:-100px -11px;}
+.PickerSpace .pickerDrawing {background-position:-145px -11px;}
+.PickerSpace .pickerImage {background-position:-235px -11px;}
+.PickerSpace .pickerMovie {background-position:-280px -11px;}
+.PickerSpace .pickerPdf {background-position:-145px -57px;}
+
+.PickerSpace .pickerTrash {
+  float: left;
+  height: 22px;
+  width: 22px;
+  background-image:url('images/trash.png');
+}
+
+.PickerSpace .pickerTrashBusy {
+  background: url('images/ajax-loader.gif') no-repeat 4px 9px;
+}
+
+.PickerSpace .pickerIeTrashBusy {
+    background: url("images/ajax-loader.gif") no-repeat scroll 4px 6px transparent;
+    height: 20px;
+    width: 20px;
+}
+
+.PickerSpace .pickerTrashActive {
+  cursor: pointer;
+}
+
+.PickerSpace .pickerFloatLeft {
+  float: left;
+}
+
+.PickerSpace .pickerIeSubmit {
+  float: right;
+  margin: 0;
+  
+}
+
+.PickerSpace .pickerIeSubmit .dijitButtonNode{
+  line-height: 27px;
+  width: 115px;
+  background: none repeat scroll 0 0 #1258B3;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+.nihilo .PickerSpace .dijitProgressBarTile {
+  background: #b5d8fe;
+}
+
+.nihilo .PickerSpace .dijitProgressBar {
+  background: white;
+  line-height: 25px;
+}
+
+.nihilo .PickerSpace .dijitProgressBarIndeterminate .dijitProgressBarTile {
+  background: #b5d8fe;
+}
+
+.PickerSpace .pickerBarsCont {
+	margin-left: 10px;
+	margin-top: 10px;
+	max-height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.PickerSpace .pickerBar {
+	width: 340px; 
+	border: 1px solid #CCCCCC;  
+	background: white;
+	float: left;
+	margin-bottom: 4px;
+	overflow: hidden;
+}
+
+.PickerSpace .pickerCancelMsg {
+  cursor: pointer;
+  float: right;
+  color: #6e6e6e;
+  font-size: 10px;
+  z-index: 100;
+}
+
+.PickerSpace .pickerCancelInactive {
+  cursor: default;
+}
+
+.PickerSpace .pickerFileMsg {
+  overflow: hidden;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.PickerSpace .pickerTitleContainer {
+	max-width: 200px;
+	overflow: hidden;
+/* 	direction: rtl; */
+	white-space: nowrap;
+	text-align: left;
+}
+
+.PickerSpace .pickerIeTitleContainer {
+  width: 216px;
+  overflow: hidden;
+/*  direction: rtl; */
+  white-space: nowrap;
+  text-align: left;
+}
+
+.PickerSpace .pickerFileSizeMsg {
+  float: left;
+  color: #6e6e6e;
+  font-size: 10px
+}
+
+.PickerSpace .pickerErrMsg {
+	color: #FF0000;
+	float: right;
+	margin-right: 5px;
+}
+
+.PickerSpace .dijitProgressBarEmpty {
+  border: medium none;
+}
+
+.PickerSpace .dijitDialog {
+  width: 400px;
+}
+
+.PickerSpace .pickerDialogConfirm {
+	background-color: #FFFFFF;
+	border-top: 1px solid #CCCCCC;
+	padding: 3px;
+}
+
+.PickerSpace .pickerDialogConfirm .dijitCheckBox {
+  margin: 0.2em;
+}
+
+.PickerSpace .pickerUploadLink {
+  color: #595959;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.PickerSpace .pickerUploadLink:hover {
+ color: #e16d4e;
+}
+
+
+/* Search and select */
+
+.PickerSpace .pickerSearchDocs {
+	padding: 5px 5px 5px 5px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.PickerSpace .pickerSearchTextBox {
+  width:340px;
+  height: 25px;
+  font-size: 12px;
+  border: 1px solid black;
+}
+
+.PickerSpace input[disabled] {
+  background: #CCC!important
+}
+
+.PickerSpace .pickerSearchTextBox .dijitInputInner {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.PickerSpace .pickerSearchTextBox .dijitInputField {
+    left: 3px;
+    top: 2px;
+    width: 335px;
+}
+
+.PickerSpace .pickerSearchResult {
+  border-bottom: 1px solid #CCCCCC;
+  overflow-y: auto;
+  max-height:337px;
+}
+
+.PickerSpace .pickerSearchAction {
+  padding: 5px;
+  margin-top: 3px;
+}
+
+.PickerSpace .pickerSearchButton.dijitButton .dijitButtonNode{
+  width:65px;
+  background: #bdbdbd; 
+  color: black;
+  border-radius: 5px;  
+  line-height: 26px;
+  margin-top: 0px;
+  padding: 0px
+}
+
+.PickerSpace .pickerSearchButton .dijitButtonText{
+  font-size: 12px;
+  font-weight: bold;
+/*   top: 6px!important; */
+}
+
+.PickerSpace .pickerSearchButton .dijitButtonContents{
+  width:65px;
+}
+
+.PickerSpace .pickerCancelLink {
+  float: left;
+}
+
+.PickerSpace .pickerAddButton {
+  float: left;
+}
+
+.PickerSpace .pickerAddButton.dijitButton .dijitButtonNode{
+  width:140px;
+  background: #1258b3; 
+  color: white;
+  border-radius: 5px;  
+  padding: 0;
+  line-height: 30px; 
+}
+
+.PickerSpace .pickerAddButton .dijitButtonText{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.PickerSpace .pickerAddButton .dijitButtonContents{
+  width:140px;
+}
+
+.PickerSpace .pickerCancelLink {
+	font-size: 12px;
+  font-weight: bold;
+  color: #3f77c1;
+  cursor: pointer;
+  line-height: 36px;
+  margin-left: 7px;
+}
+
+.PickerSpace .pickerCancelLink:hover {
+ color: #e16d4e;
+}
+
+.PickerSpace .pickerDocsLoading {
+  height: 28px;
+  margin: 0 auto;
+  width: 24px;
+  background: url('images/ajax-loader.gif') no-repeat 4px 9px;
+}
+
+.PickerSpace .pickerNoDocs {
+  height: 28px;
+  margin: 0 auto;
+  margin-top: 6px;
+  width: 96px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px; 
+}
+
+.PickerSpace .pickerDocsTitle {
+    float: left;
+    line-height: 38px;
+    max-width: 70%;
+    overflow: hidden;
+}
+
+.PickerSpace .pickerDocsTitleContainer {
+/*    direction: rtl; */
+   max-width: 300px;
+   white-space: nowrap;
+}
+
+.PickerSpace .pickerDocsDate {
+  float: right;
+  color: #999999;
+  line-height: 38px;
+  margin-right: 15px;
+}
+
+.PickerSpace .pickerDocIcon {
+   margin: 7px;
+}
+
+.PickerSpace .pickerDocPane {
+  width: 100%;
+  height: 35px;
+  font-size: 12px;
+  font-weight: bold;
+  overflow: hidden;
+  border-bottom: 1px solid #CCCCCC; 
+}
+
+.PickerSpace .pickerDocPane:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.PickerSpace .pickerDocPaneNoHover {
+  width: 100%;
+  height: 35px;
+  font-size: 12px;
+  font-weight: bold;
+  overflow: hidden;
+  border-bottom: 1px solid #CCCCCC; 
+}
+
+.PickerSpace .pickerDocPaneNoHover:hover {
+  cursor: pointer;
+  background-color: #EBEBBE;
+}
+
+.PickerSpace .pickerDocPaneScroll {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.PickerSpace .pickerLastDocPane {
+  border-bottom: none; 
+}
+
+.PickerSpace .dijitInputField {
+    left: 3px;
+    top: 2px;
+}
+
+.PickerSpace .dijitPlaceHolder {
+    left: 3px;
+    top: -1px;
+}
+
+.PickerSpace .pickerDocSelected {
+	background: #FFFFCC;
+}
+
+/* notifier */
+.PickerSpaceNotifier {
+    background: none repeat scroll 0 0 #FFFBBE;
+    box-shadow: 0px 1px 4px #333;
+    left: 50%;
+    margin: 0 auto 0 -160px;
+    padding: 5px 10px;
+    position: absolute;
+    top: -20000px;
+    width: 320px;
+    z-index: 2000;
+}
+
+.PickerSpaceNotifierError {
+    background: none repeat scroll 0 0 #FF0000;
+}
+
+.PickerSpaceNotifierInner {
+    position: relative;
+}
+
+.PickerSpaceNotifierText {
+    color: #343433;
+    font-size: 12px;
+    font-weight: bold;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.PickerSpaceNotifierError .PickerSpaceNotifierText {
+    color: #FFFFFF;
+}
+
+a.PickerSpaceNotifierClose {
+    background-image: url("../resources/images/closeButtonSprite.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    height: 12px;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    width: 12px;
+}
+
+a.PickerSpaceNotifierClose:active, a.PickerSpaceNotifierClose:hover {
+    background-position: -24px 0;
+}
